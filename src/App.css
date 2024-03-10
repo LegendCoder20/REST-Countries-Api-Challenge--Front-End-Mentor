@@ -1,38 +1,113 @@
-.App {
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* border: 2px solid red; */
+}
+
+/* Navbar Styles */
+
+nav {
+  /* background-color: antiquewhite; */
+  height: 4rem;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+:is(nav .title, nav .dark-mode) {
+  width: 20%;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+nav .title {
+  font-size: x-large;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
+/* Search Bar Line Styles */
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.search-container {
+  height: 8rem;
+  width: 100%;
+  background-color: hsl(0, 0%, 98%);
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.search-bar {
+  display: flex;
+  width: 33.5%;
+  text-align: center;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* Style for the input field in the search bar */
+.search-input {
+  margin-left: 40px;
+  padding-left: 60px;
+  height: 50px;
+  width: 450px;
+  font-size: 16px;
+  border: 2px solid hsl(0, 30%, 96%);
+  box-shadow: 0px 0px 10px 0.5px hsl(0, 3%, 78%);
+  background-image: url(https://www.nicepng.com/png/detail/5-55201_search-icon-png-grey.png);
+  background-size: 20px;
+  background-repeat: no-repeat;
+  background-position: 20px center;
+}
+
+/* Style for the placeholder text in the input field */
+.search-input::placeholder {
+  color: hsl(0, 6%, 75%);
+  font-size: 16px;
+}
+
+/* Style for the filter box */
+.filter-box {
+  width: 18.5%;
+}
+
+/* Style for the text inside the filter box */
+.filter-by-region {
+  height: 50px;
+  width: 238px;
+  padding-left: 16px;
+  font-size: 16px;
+  text-align: start;
+  border: 2px solid hsl(0, 30%, 96%);
+  box-shadow: 0px 0px 10px 0.5px hsl(0, 3%, 78%);
+}
+
+/*  */
+/* Home Page Design */
+
+.items-container {
+  width: 100%;
+  background-color: hsl(0, 0%, 98%);
+  display: grid;
+  place-items: center;
+  grid-template-columns: repeat(4, 1fr);
+  grid-row-gap: 70px;
+}
+.country {
+  width: 80%;
+  height: 370px;
+  background-color: white;
+  border-radius: 7px;
+  box-shadow: 0px 0px 10px 0.5px hsl(0, 9%, 89%);
+}
+.image img {
+  max-width: 100%;
+  aspect-ratio: 5/3;
+  border-radius: 7px;
+}
+
+.country-info {
+  margin: 20px;
+  font-size: 14px;
+}
+
+.country-name {
+  margin-bottom: 18px;
+  font-size: 18px;
 }
